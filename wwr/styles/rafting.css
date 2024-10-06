@@ -1,3 +1,121 @@
+/* Define CSS variables in the :root pseudo-class */
 :root {
-    
+    --primary-color: #c9e4ca;
+    --accent-color: #022b3a;
+    --font-color: #91785d;
+    --background-color: #669bbc;
+}
+
+/* Set global styles */
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: Arial, sans-serif;
+    max-width: 1200px; /* Limit page width */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Headings styling */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+p {
+    color: var(--font-color);
+    line-height: 1.6;
+}
+
+/* Social media links */
+a {
+    color: var(--accent-color);
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Button example (optional if you have buttons) */
+button {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.hero img{
+    display: block;
+    width: 100%
+    height: auto;
+}
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    display: block;
+    width: 100%; /* Ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Positioning the heading absolutely */
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 3em;
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.7); /* Add opacity for readability */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Positioning the article absolutely */
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 80%; /* Make the article cover part of the hero */
+    background-color: rgba(255, 255, 255, 0.7); /* Opacity for readability */
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--font-color);
+}
+
+/* Float the image inside the article to the right */
+.hero article img {
+    float: right;
+    margin-left: 20px;
+    width: 150px; /* Adjust based on your image size */
+    height: auto;
+}
+
+/* Ensure paragraphs are styled and readable */
+.hero article p {
+    line-height: 1.6;
+}
+
+/* Optional: Style the rest of the page */
+body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    color: var(--font-color);
+    margin: 0;
+    padding: 20px;
+    max-width: 1200px; /* Limit page width */
+    margin: 0 auto;
 }
