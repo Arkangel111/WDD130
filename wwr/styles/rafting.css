@@ -255,3 +255,10 @@ footer {
     width: 40px; 
     height: auto;
 }
+
+/* Styling for the map container */
+.map-container iframe {
+    width: 100%; /* Make it responsive */
+    height: 450px;
+    border: none; /* Remove border */
+}
