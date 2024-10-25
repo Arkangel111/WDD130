@@ -56,7 +56,7 @@ button:hover {
 }
 /* Hero section */
 .hero {
-    position: sticky;
+    position: relative;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -93,6 +93,7 @@ button:hover {
     border-radius: 10px;
     color: var(--font-color);
 }
+
 
 .hero article img {
     max-width: 150px;
@@ -373,17 +374,26 @@ footer p a {
 }
 
 /* Call to Action Section */
-.call-to-action {
-    text-align: center;
+.cta-newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     margin: 30px 0;
 }
 
-.call-to-action h2 {
-    font-size: 2em;
+.cta-contact, .newsletter-signup {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.cta-contact h2, .newsletter-signup h2 {
+    font-size: 1.8em;
     color: var(--accent-color);
 }
 
-.call-to-action .cta-button {
+.cta-button {
     display: inline-block;
     background-color: var(--accent-color);
     color: #fff;
@@ -391,12 +401,10 @@ footer p a {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1em;
-    margin-top: 10px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.call-to-action .cta-button:hover {
-    background-color: var(--primary-color);
+.cta-button:hover {
+    background-color: var(--font-color);
     color: var(--accent-color);
 }
 
@@ -415,11 +423,16 @@ footer p a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.info-item {
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
 .info-item p {
-    padding: 10px;
-    color: var(--font-color);
-    background-color: var(--primary-color);
-    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
 }
 /* Call to Action - Contact Section */
 .cta-contact {
@@ -508,4 +521,14 @@ footer p a {
 .trips-table td {
     background-color: var(--primary-color);
     color: var(--font-color);
+}
+
+@media (max-width: 768px) {
+    .cta-newsletter, .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2em;
+        padding: 8px 16px;
+    }
 }
