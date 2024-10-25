@@ -60,8 +60,7 @@ button:hover {
     width: 100%;
     margin-bottom: 20px;
 }
-.hero img{
-    display: block;
+.hero img {
     width: 100%;
     height: auto;
     max-height: 600px;
@@ -71,17 +70,18 @@ button:hover {
 
 
 .hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    transform: none; 
     font-size: 3em;
     color: var(--background-color);
-    background-color: rgba(255, 255, 255, 0.7); /* Add opacity for readability */
-    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
     border-radius: 5px;
+    display: inline-block; 
+    margin-top: -350px; 
     text-align: center;
-}
 
 .hero article {
     position: absolute;
