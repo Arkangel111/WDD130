@@ -1,8 +1,8 @@
 /* Define CSS variables in the :root pseudo-class */
 :root {
     --primary-color: #c9e4ca;
-    --accent-color: #022b3a;
-    --font-color:#669bbc;
+    --accent-color: #045e7f;
+    --font-color:#274164;
     --background-color:  #91785d;
 }
 
@@ -56,7 +56,7 @@ button:hover {
 }
 /* Hero section */
 .hero {
-    position: relative;
+    position: static;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -64,6 +64,10 @@ button:hover {
     display: block;
     width: 100%;
     height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -92,9 +96,10 @@ button:hover {
 }
 
 .hero article img {
-    float: right;
-    margin-left: 20px;
-    width: 150px; 
+    max-width: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px; 
     height: auto;
 }
 
@@ -416,4 +421,92 @@ footer p a {
     color: var(--font-color);
     background-color: var(--primary-color);
     border-radius: 5px;
+}
+/* Call to Action - Contact Section */
+.cta-contact {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.cta-contact .cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.cta-contact .cta-button:hover {
+    background-color: var(--font-color);
+    color: var(--accent-color);
+}
+
+/* Trip Descriptions Grid */
+.trip-descriptions {
+    margin: 30px 0;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip {
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip img {
+    width: 100%;
+    height: auto;
+}
+
+.trip h3 {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.trip p {
+    padding: 0 10px 20px;
+    color: var(--font-color);
+}
+
+/* Trips Table */
+.trips-table {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.trips-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.trips-table th, .trips-table td {
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.trips-table th {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+.trips-table td {
+    background-color: var(--primary-color);
+    color: var(--font-color);
 }
