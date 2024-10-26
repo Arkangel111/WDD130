@@ -67,8 +67,14 @@ button:hover {
     object-fit: cover;
     margin: 0 auto;
 }
-
-
+.hero .hero-heading-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -150px; 
+    z-index: 1; 
+}
 .hero h1 {
     position: relative; 
     top: 0; 
@@ -82,6 +88,7 @@ button:hover {
     display: inline-block; 
     margin-top: -350px; 
     text-align: center;
+}
 
 .hero article {
     position: absolute;
